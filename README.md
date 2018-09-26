@@ -1,10 +1,10 @@
 # Native Vue Base
 
-> A native application built with NativeScript-Vue
+> A native application built with NativeScript-Vue version 2
 
 ## Usage
 
-``` bash
+```bash
 # Install dependencies
 npm install
 
