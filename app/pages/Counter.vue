@@ -1,9 +1,6 @@
 <template>
 	<Page class="page">
-		<ActionBar title="My App">
-			<ActionItem @tap="onTapSave"  ios.systemIcon="3" ios.position="right" android.systemIcon="ic_menu_save" />
-			<ActionItem @tap="onTapCancel" ios.systemIcon="1" android.systemIcon="ic_menu_close_clear_cancel" />
-		</ActionBar>
+		<action-bar title="CARD VIEWS" :user="false" :navigation="true" />
 		<scroll-view>
 			<stack-layout>
 				<CardView ripple="true" margin="5" id="batCard" class="whiteCard">

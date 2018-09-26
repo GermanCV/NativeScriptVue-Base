@@ -42,5 +42,14 @@ Vue.registerElement(
 
 new Vue({
   store,
-  render: h => h('Frame', [h(App)]),
+  render: h =>
+    h(
+      'Frame',
+      {
+        props: {
+          transition: { name: 'fade', duration: 400 }
+        }
+      },
+      [h(App)]
+    )
 }).$start();

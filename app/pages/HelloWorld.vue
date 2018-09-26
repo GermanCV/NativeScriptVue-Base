@@ -1,7 +1,6 @@
 <template>
-  <Page>    
-    <ActionBar title="Sqlite" :user="false" :navigation="true" />
-
+  <Page>
+    <action-bar title="Sqlite" :user="false" :navigation="true" />
     <ScrollView scrollBarIndicatorVisible="false" row="0" col="0">
       <StackLayout width="100%">
         <FlexboxLayout flexDirection="column" width="100%" justifyContent="space-around" alignItems="space-around">
@@ -29,20 +28,16 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import ActionBar from '../components/ActionBar';
 
 export default {
-  components: {
-    ActionBar,
-  },
   data: () => ({
     items: {
       value1: 'value 1',
-      value2: 'value 1',
-    },
+      value2: 'value 1'
+    }
   }),
   methods: {
-    ...mapActions(['SAVE', 'DELETE']),
+    ...mapActions(['SAVE', 'DELETE'])
   },
   created() {
     this.$store.dispatch('ALL_ITEMS');
@@ -51,9 +46,9 @@ export default {
     ...mapState({
       list: state => {
         return state.sqlite.list;
-      },
-    }),
-  },
+      }
+    })
+  }
 };
 </script>
 

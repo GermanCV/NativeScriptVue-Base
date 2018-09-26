@@ -14,40 +14,28 @@ export default {
     index: 0,
     items: [
       {
-        title: 'Informacion',
+        title: 'Informacion'
       },
       {
-        title: 'Encuestas',
-      },
-    ],
+        title: 'Encuestas'
+      }
+    ]
   }),
   methods: {
     select() {
       console.log(this.index);
       if (this.selectedIndex === 0) {
         //this.$router.push('/encuesta');
-        this.$navigateTo(Encuesta, {
-          transitionAndroid: {
-            name: 'fade',
-            duration: 50,
-            curve: 'easeIn',
-          },
-        });
+        this.$navigateTo(Encuesta);
       } else if (this.selectedIndex === 1) {
         //this.$router.push('/home');
-        this.$navigateTo(Home, {
-          transitionAndroid: {
-            name: 'fade',
-            duration: 50,
-            curve: 'easeIn',
-          },
-        });
+        this.$navigateTo(Home);
       }
-    },
+    }
   },
   computed: {
-    ...mapState(['segmented', 'theme']),
-  },
+    ...mapState(['segmented', 'theme'])
+  }
 };
 </script>
 

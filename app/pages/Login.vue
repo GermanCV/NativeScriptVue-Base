@@ -3,7 +3,6 @@
     <StatusBar ios:barStyle="light" :barColor="theme.themes.DARK" />
     <ActionBarTrans/>
     <ScrollView orientation="vertical">
-  
       <FlexboxLayout flexDirection="column" class="login_content">
         <StackLayout>
           <Label text="CAMINOS DEL INCARRY" :color="theme.active.PRIMARY" class="label-login" />
@@ -28,7 +27,7 @@ import FloatLabel from '../components/FloatLabel';
 export default {
   components: {
     ActionBarTrans,
-    FloatLabel,
+    FloatLabel
   },
   data: () => ({
     title: 'Informacion',
@@ -36,7 +35,7 @@ export default {
     username: '',
     password: '',
     selectedIndex: 0,
-    barColor: '#00A7DC',
+    barColor: '#00A7DC'
   }),
   mounted() {},
   methods: {
@@ -62,11 +61,11 @@ export default {
         // this.$router.push('/home');
         //label.translateY = 0;
       }, 10);
-    },
+    }
   },
   computed: {
-    ...mapState(['segmented', 'theme']),
-  },
+    ...mapState(['segmented', 'theme'])
+  }
 };
 </script>
 
